@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>#413 Hedelmäpeli</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <script src="game.js"></script>
+
+        <div class="banner">
+            Hedelmäpeli
+        </div>
+        <div class="wrap">
+            <div class="left">
+                <div class="alert">.<p id="alert"> </p></div>
+                <div class="panos" id="panos">
+                    <p>Rahaa: <span id="rahaaNro">100</span>€</p>
+                    <p>Panos: <span id="panosNro">1</span>€</p>
+                    <button id="panos1" onclick="setPanos(1)">
+                        <img src="img/coin.png"><br>
+                        1€
+                    </button><!--
+                    --><button id="panos2" onclick="setPanos(2)">
+                        <img src="img/coin.png"><br>
+                        2€
+                    </button><!--
+                    --><button id="panos3" onclick="setPanos(3)">
+                        <img src="img/coin.png"><br>
+                        3€
+                    </button>
+                </div>
+
+                <div class="rullat">
+                    <div class="rulla">
+                        <span id="rulla1"><img src="img/apple.png"></span>
+                        
+                        <button class="lukko" id="lukko1" onclick="lukitse(1)">
+                            LUKITSE
+                            <img src="img/lock.png">
+                        </button>
+                    </div>
+                    <div class="rulla">
+                        <span id="rulla2"><img src="img/pear.png"></span>
+
+                        <button class="lukko" id="lukko2" onclick="lukitse(2)">
+                            LUKITSE
+                            <img src="img/lock.png">
+                        </button>
+                    </div>
+                    <div class="rulla">
+                        <span id="rulla3"><img src="img/cherry.png"></span>
+
+                        <button class="lukko" id="lukko3" onclick="lukitse(3)">
+                            LUKITSE
+                            <img src="img/lock.png">
+                        </button>
+                    </div>
+                    <div class="rulla">
+                        <span id="rulla4"><img src="img/melon.png"></span>
+
+                        <button class="lukko" id="lukko4" onclick="lukitse(4)">
+                            LUKITSE
+                            <img src="img/lock.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <table>
+                    <tr>
+                        <td class="voitto">
+                            <img src="img/apple.png">
+                            <img src="img/apple.png">
+                            <img src="img/apple.png">
+                            <img src="img/apple.png">
+                        </td>
+                        <td class="voittoRaha">
+                            <span id="appleVoitto">6</span> <img src="img/coin.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="voitto">
+                            <img src="img/melon.png">
+                            <img src="img/melon.png">
+                            <img src="img/melon.png">
+                            <img src="img/melon.png">
+                        </td>
+                        <td class="voittoRaha">
+                            <span id="melonVoitto">5</span> <img src="img/coin.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="voitto">
+                            <img src="img/pear.png">
+                            <img src="img/pear.png">
+                            <img src="img/pear.png">
+                            <img src="img/pear.png">
+                        </td>
+                        <td class="voittoRaha">
+                            <span id="pearVoitto">4</span> <img src="img/coin.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="voitto">
+                            <img src="img/cherry.png">
+                            <img src="img/cherry.png">
+                            <img src="img/cherry.png">
+                            <img src="img/cherry.png">
+                        </td>
+                        <td class="voittoRaha">
+                            <span id="cherryVoitto">3</span> <img src="img/coin.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="voitto">
+                            <img src="img/seven.png">
+                            <img src="img/seven.png">
+                            <img src="img/seven.png">
+                            <img src="img/seven.png">
+                        </td>
+                        <td class="voittoRaha">
+                            <span id="sevenVoitto">10</span> <img src="img/coin.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="voitto">
+                            <img src="img/seven.png">
+                            <img src="img/seven.png">
+                            <img src="img/seven.png">
+                        </td>
+                        <td class="voittoRaha">
+                            <span id="sevenKolmeVoitto">5</span> <img src="img/coin.png">
+                        </td>
+                    </tr>
+                </table>
+
+                <button class="pelaa" onclick="pelaa()">
+                    <b>PELAA</b>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
